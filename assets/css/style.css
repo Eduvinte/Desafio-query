@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+navbar{
+    grid-area: navbar;
+    background-color: blue;
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+navbar select {
+    width: 70%;
+    text-align: center;
+    margin: 1%;
+}
+
+.productos{
+    grid-area: productos;
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1%;
+}
+
+.producto1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.producto1 button {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px 10px 20px;
+}
+
+.productos img {
+    width: 40%;
+}
+
+.asidebar{
+    grid-area: asidebar;
+    height: 100vh;
+    background-color: rgb(162, 226, 43);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+}
+.asidebar ul li {
+    margin-top: 10%;
+}
+
+footer{
+    grid-area: footer;
+    padding: 5%;
+    background-color: rgb(226, 70, 43);
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.asidebar-movil{
+    display: none;
+}
+.productos-movil{
+    display: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    "navbar navbar navbar navbar navbar"
+    "asidebar productos productos productos productos"
+    "footer footer footer footer footer"
+    ;
+
+    grid-template-columns: 1fr 4fr 1fr 1fr;
+}
+
+@media only screen and (max-width: 600px) {
+    .asidebar {
+        display: none;
+    }
+
+    .asidebar-movil{
+        display: block;
+        padding: 2%;
+        background-color: rgb(162, 226, 43);
+        display: flex;
+        justify-content: space-between;
+        color: aliceblue;
+        font-size: 25px;
+        
+    }
+    .productos{
+        display: none;
+    }
+
+    .productos-movil{
+        display: flex;
+    }
+    .producto2{
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10%;
+        
+    }
+
+    footer{
+        margin-top: 10%;
+    }
+  }
